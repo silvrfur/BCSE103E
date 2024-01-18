@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your bank details</title>
+    <style>
+        .mainContainer{
+            width: 30%;
+            margin: auto auto;
+            padding: 10px;
+            background-color: rgb(122, 182, 49);
+        }
+        .mainContainer.button{
+            text-align: center;
+        }
+        .address{
+            display: inline;
+        }
+        .container{
+            margin-top: 10px;
+        }
+        .innerContainer{
+            border: 1px solid white;
+            background-color: rgb(171, 209, 110);
+            border-radius: 2px;
+            padding: 8px;
+            margin: 3px;
+        }
+        ::placeholder {
+            font-style: italic;
+        }
+        input{
+            margin-right:5px ;
+        }
+        .button {
+            cursor: pointer;
+            background-color: rgb(66, 64, 64);
+            border: 1px solid black;
+            margin: 5px 131px;
+            border-radius: 38px;
+            color: white;
+            padding: 13px 26px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+
+        <div class="container">
+            Step 1: Your details
+        <div class="innerContainer">
+            <form action="post">
+                <label>Name
+                    <input type="text" placeholder="First and last name"></label>
+            </form>
+        </div>
+
+        <div class="innerContainer">
+            <form action="post">
+                <label>Email
+                    <input type="text" placeholder="example@domain.com"></label>
+            </form>
+        </div>
+
+        <div class="innerContainer">
+            <form action="post">
+                <label>Phone
+                    <input type="text" placeholder="Eg. +447500000000"></label>
+            </form>
+        </div>
+        </div>
+        
+
+        <div class="container">
+            Step 2: Delivery address
+        <div class="innerContainer">
+            <form action="post">
+                <div class="address"> Address</div> 
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+            </form>
+        </div>
+
+        <div class="innerContainer">
+            <form action="post">
+                <label>Post code
+                    <input type="text" ></label>
+            </form>
+        </div>
+
+        <div class="innerContainer">
+            <form action="post">
+                <label>Country
+                    <input type="text" ></label>
+            </form>
+        </div>
+        </div>
+        
+        <div class="container">
+            Step 3: Card details 
+        <div class="innerContainer">
+            <form action="post">
+                <label>Card type
+                    <br>
+                    <input type="radio">VISA
+                    <input type="radio">AmEx
+                    <input type="radio">Mastercard
+            </form>
+        </div>
+
+        <div class="innerContainer">
+            <form action="post">
+                <label>Card number
+                    <input type="text" ></label>
+            </form>
+        </div>
+
+        <div class="innerContainer">
+            <form action="post">
+                <label>Security code
+                    <input type="text" ></label>
+            </form>
+        </div>
+
+        <div class="innerContainer">
+            <form action="post">
+                <label>Name on card 
+                    <input type="text" placeholder="Exact name as on the card"></label>
+            </form>
+        </div>
+        </div>
+        
+
+        <button class="button">BUY IT!</button>
+    </div>
+</body>
+</html>
