@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flags</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="usFlag" width="200" height="150"></canvas>
+  <canvas id="ukFlag" width="200" height="150"></canvas>
+  <canvas id="franceFlag" width="200" height="150"></canvas>
+  <canvas id="germanyFlag" width="200" height="150"></canvas>
+  <canvas id="indiaFlag" width="200" height="150"></canvas>
+
+  <script>
+    // Get canvas elements
+    const usFlagCanvas = document.getElementById('usFlag');
+    const ukFlagCanvas = document.getElementById('ukFlag');
+    const franceFlagCanvas = document.getElementById('franceFlag');
+    const germanyFlagCanvas = document.getElementById('germanyFlag');
+    const indiaFlagCanvas = document.getElementById('indiaFlag');
+
+    // Get canvas contexts
+    const usFlagCtx = usFlagCanvas.getContext('2d');
+    const ukFlagCtx = ukFlagCanvas.getContext('2d');
+    const franceFlagCtx = franceFlagCanvas.getContext('2d');
+    const germanyFlagCtx = germanyFlagCanvas.getContext('2d');
+    const indiaFlagCtx = indiaFlagCanvas.getContext('2d');
+
+    // Draw flags
+    drawUSFlag(usFlagCtx);
+    drawUKFlag(ukFlagCtx);
+    drawFranceFlag(franceFlagCtx);
+    drawGermanyFlag(germanyFlagCtx);
+    drawIndiaFlag(indiaFlagCtx);
+
+    // Function to draw the US flag
+    function drawUSFlag(ctx) {
+      // Draw the flag using canvas methods
+      ctx.fillStyle = 'red';
+      ctx.fillRect(0, 0, 200, 100);
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 100, 200, 50);
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(0, 150, 40, 50);
+    }
+
+    // Function to draw the UK flag
+    function drawUKFlag(ctx) {
+      // Draw the flag using canvas methods
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(0, 0, 66.67, 150);
+      ctx.fillStyle = 'white';
+      ctx.fillRect(66.67, 0, 66.67, 150);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(133.34, 0, 66.66, 150);
+    }
+
+    // Function to draw the France flag
+    function drawFranceFlag(ctx) {
+      // Draw the flag using canvas methods
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(0, 0, 66.67, 150);
+      ctx.fillStyle = 'white';
+      ctx.fillRect(66.67, 0, 66.67, 150);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(133.34, 0, 66.66, 150);
+    }
+
+    // Function to draw the Germany flag
+    function drawGermanyFlag(ctx) {
+      // Draw the flag using canvas methods
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, 200, 50);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(0, 50, 200, 50);
+      ctx.fillStyle = 'yellow';
+      ctx.fillRect(0, 100, 200, 50);
+    }
+
+    // Function to draw the India flag
+    function drawIndiaFlag(ctx) {
+      // Draw the flag using canvas methods
+      ctx.fillStyle = 'orange';
+      ctx.fillRect(0, 0, 200, 50);
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 50, 200, 50);
+      ctx.fillStyle = 'green';
+      ctx.fillRect(0, 100, 200, 50);
+    }
+  </script>
+</body>
+</html>
