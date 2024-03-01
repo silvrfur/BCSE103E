@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Defined Object</title>
+    <script type="text/javascript">
+        function addPrice(amount){
+            this.price=amount;
+        }
+        function book(title, author){
+            this.title=title;
+            this.author=author;
+            this.addPrice=addPrice;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var myBook=new book("Perl","Mohtashim");
+        myBook.addPrice(100);
+        document.write("Book title is: "+myBook.title+"<br>");
+        document.write("Book author is: "+myBook.author+"<br>");
+        document.write("Book price is: "+myBook.price+"<br>");
+    </script>
+
+    <!-- ................. -->
+
+    <h1>My First javascript</h1>
+    <p id="demo">
+        javascript can change the content of an HTML Element.
+    </p>
+    <button type="button" onclick="myFunction()">Click Here.</button>
+    <script>
+        function myFunction(){
+            x=document.getElementById("demo");
+            x.innerHTML="Hello JavaScript";
+        }
+    </script>
+
+    <!-- .................. -->
+    <p>Click the button to demonstrate the prompt box.</p>
+    <button onclick="myFunction2()">Try it</button>
+    <p id="demo2"></p>
+    <script>
+        function myFunction2(){
+            var person=prompt("Please enter your name","Harry Potter");
+            if(person!=null){
+                document.getElementById("demo2").innerHTML="hello"+person+"sup";
+            }
+        }
+    </script>
+
+    <!-- displaying info to user..? -->
+    <!-- ............. -->
+    
+    <h1>My First javascript(again)</h1>
+    <p>Please Input a number.</p>
+    <input type="text" id="demo3">
+    <script>
+        function myFunction3(){
+            var x=document.getElementById("demo3").value;
+            if(x=="" || isNaN(x)){
+                alert("not a number");
+            }
+            else{
+                alert("is a number");
+            }
+        }
+    </script>
+    <button type="button" onclick="myFunction3()">Click Me for checking for a number</button>
+
+    <!-- bulb on and off -->
+    <script>
+    //     function changeImage(){
+    //         element=document.getElementById('myImage');
+    //         if(element.src.match("bulbon.png")){
+    //             element.src="bulboff.png";
+    //         }
+    //         else{
+    //             element.src=
+    //         }
+    //     }
+    
+        function changeImage(element) {
+            if (element.src.match("bulbon.png")) {
+                element.src = "bulboff.png";
+            } else {
+                element.src = "bulbon.png";
+            }
+        }
+        
+    </script>
+    <img class="myImage" onclick="changeImage(this)" src="bulboff.png" alt="" width="100" height="180">
+    <p>Click bulb to turn it off and on</p>
+
+
+    <!-- check for email,  -->
+    <!-- date -->
+</body>
+</html>
